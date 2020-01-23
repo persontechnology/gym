@@ -35,7 +35,7 @@ class SocialAuthController extends Controller
                 'name' => $social_user->name,
                 'email' => $social_user->email,
                 'avatar' => $social_user->avatar,
-                'nombre'=>'',
+                'nombre'=>$social_user->name,
                 'apellido'=>'',
                 'cedula'=>'',
                 'perfil'=>'Cliente',

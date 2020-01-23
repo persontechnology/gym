@@ -2,6 +2,7 @@
 
 namespace gym\Http\Controllers\Auth;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use gym\Http\Controllers\Controller;
 use gym\User;
@@ -34,7 +35,8 @@ class SocialAuthController extends Controller
                 'nombre'=>'',
                 'apellido'=>'',
                 'cedula'=>'',
-                'perfil'=>'Cliente'
+                'perfil'=>'Cliente',
+                'email_verified_at'=>Carbon::now()
             ]);
  
             return $this->authAndRedirect($user); // Login y redirección

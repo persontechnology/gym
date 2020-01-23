@@ -31,6 +31,10 @@ class SocialAuthController extends Controller
                 'name' => $social_user->name,
                 'email' => $social_user->email,
                 'avatar' => $social_user->avatar,
+                'nombre'=>'',
+                'apellido'=>'',
+                'cedula'=>'',
+                'perfil'=>'Cliente'
             ]);
  
             return $this->authAndRedirect($user); // Login y redirección

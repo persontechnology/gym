@@ -176,6 +176,10 @@ return [
         gym\Providers\RouteServiceProvider::class,
         Laraveles\Spanish\SpanishServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Tavo\EcLaravelValidator\EcValidatorServiceProvider::class,
+        
+
 
     ],
 
@@ -228,6 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        
 
     ],
 

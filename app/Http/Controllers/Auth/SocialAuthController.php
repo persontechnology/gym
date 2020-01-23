@@ -24,7 +24,10 @@ class SocialAuthController extends Controller
         // Obtenemos los datos del usuario
         $social_user = Socialite::driver($provider)->user(); 
         // Comprobamos si el usuario ya existe
-        if ($user = User::where('email', $social_user->email)->first()) { 
+        $user = User::where('email', $social_user->email)->first();
+        if ($user) { 
+            $user->email_verified_at=Carbon::now();
+            $user->save();
             return $this->authAndRedirect($user); // Login y redirección
         } else {  
             // En caso de que no exista creamos un nuevo usuario con sus datos.

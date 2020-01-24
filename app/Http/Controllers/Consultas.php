@@ -29,6 +29,7 @@ class Consultas extends Controller
     	if ($cliente) {
 
     		$asi=Asistencia::where('created_at',Carbon::today())->first();
+            
             if (!$asi) {
                 $asi=new Asistencia;
                 $asi->created_at=Carbon::today();
@@ -45,14 +46,16 @@ class Consultas extends Controller
             }
             
             $request->session()->put('cedulaok', 'true');
-
-            return redirect()->route('miasistenciaLista',['clave'=>$cliente->cedula]);
+            
+            return redirect()->route('miasistenciaLista',$cliente->identificacion);
     	}else{
-    		Session::flash('warning','No existe cliente con dicha información.!');
+        
+            Session::flash('warning','No existe cliente con dicha información.!');
             return redirect()->route('miasistenciaConsulta');
     	}
     }
-
+    
+    
     public function miasistenciaLista($cedula)
     {
     	
@@ -60,12 +63,14 @@ class Consultas extends Controller
     	if ($value=='true') {
     		$cliente=User::where('identificacion',$cedula)->first();
 	    	if ($cliente) {
+                
 	    		Session::forget('cedulaok');
 	    		return view('consultas.miasistencias',['cliente'=>$cliente]);
 	    	}else{
 	    		return view('error');
 	    	}
     	}else{
+            
     		Session::forget('cedulaok');
     		return redirect()->route('miasistenciaConsulta');
     	}

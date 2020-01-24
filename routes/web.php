@@ -115,7 +115,7 @@ Route::get('/pagos-imprimir/{id}', 'Pagos@imprimir')->name('imprimirPago');
 // consultas de cliente
 
 
-Route::get('/igresar-a-mi-asistecia/', 'Consultas@miAsistencia')->name('miasistenciaConsulta');
+Route::get('/igresar-a-mi-asistecia', 'Consultas@miAsistencia')->name('miasistenciaConsulta');
 Route::post('/mi-asistecia-generar', 'Consultas@generarAsisetncia')->name('generarMiAsistencia');
 Route::get('/mi-asistencia-lista/{id}', 'Consultas@miasistenciaLista')->name('miasistenciaLista');
 

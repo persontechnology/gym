@@ -23,7 +23,7 @@
                               <th scope="col">Proveedor</th>
                               <th scope="col">Foto</th>
                               <th scope="col">Descripción</th>
-                              <th scope="col">Categoria</th>
+                              <th scope="col">Categoría</th>
                               <th scope="col">Acción</th>
                             </tr>
                           </thead>
@@ -67,7 +67,7 @@
 
 <script>
   $('#m_registro').addClass('active');
-  $('#m_producto').addClass('active');
+  $('#m_productor').addClass('active');
 
 
   function eliminar(argument) {

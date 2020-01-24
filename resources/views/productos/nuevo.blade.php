@@ -163,7 +163,7 @@
 
 <script>
   $('#m_registro').addClass('active');
-  $('#m_maquina').addClass('active');
+  $('#m_productor').addClass('active');
 
 
   $( "#formCliente" ).validate( {

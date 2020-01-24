@@ -21,7 +21,7 @@
                               <th scope="col">Estado</th>
                               <th scope="col">Total</th>
                               <th scope="col">Cliente</th>
-                              <th scope="col">Cédula</th>
+                              <th scope="col">Identificación</th>
                               <th scope="col">Acción</th>
                             </tr>
                           </thead>
@@ -42,7 +42,7 @@
                               <td>{{$cli->total}}</td>
                               <td>{{$cli->cliente->nombre}} {{$cli->cliente->apellido}} </td>
                               <td>
-                                  {{ $cli->cliente->cedula }}
+                                  {{ $cli->cliente->identificacion }}
                               </td>
 
                                 <td>

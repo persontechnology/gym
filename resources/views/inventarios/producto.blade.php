@@ -9,7 +9,9 @@
                     <div class="card-header">
                       <form action="{{route('crearInventarioProducto')}}" method="post">
                          @csrf
+                         <a class="btn btn-danger" href="{{route('productos')}}">atras</a>
                          <h2>Cantidad:actual {{$producto->cantidad}}</h2>
+                         
                          <input type="hidden" name="id" value="{{$producto->id}}">
                          <div class="col-md-12">
                           <label for="cantidad" class="col-md-12 col-form-label">Ingrese cantidad existente</label>
@@ -66,7 +68,7 @@
 
                                 </td>
                                 <td>
-                                  <button class="btn btn-danger btn-sm" onclick="eliminar(this);" data-url="{{route('eliminarInventario',['clave'=>$cli->id])}}">Eliminar</button>
+                                  <button class="btn btn-danger btn-sm" onclick="eliminar(this);" data-url="{{route('eliminarInventario',$cli->id)}}">Eliminar</button>
                                 </td>
                             </tr>
       
@@ -84,8 +86,8 @@
 
 
 <script>
-  $('#m_mensual').addClass('active');
-  $('#m_factura').addClass('active');
+  $('#m_registro').addClass('active');
+  $('#m_productor').addClass('active');
   function eliminar(argument) {
     
     alertify.confirm("ESTA SEGURO DE ELIMINAR.","Se perdera toda la información",

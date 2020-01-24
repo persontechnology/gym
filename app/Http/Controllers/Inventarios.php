@@ -48,7 +48,7 @@ class Inventarios extends Controller
             
     		}
 
-    	return redirect()->route('inventario',['clave'=>$inventario->producto->id]);
+    	return redirect()->route('inventario',$inventario->producto->id);
     		
     	}
     	return view('error');	

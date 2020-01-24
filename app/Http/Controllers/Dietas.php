@@ -8,6 +8,9 @@ use Auth;
 use gym\Dieta;
 
 use gym\Dietah;
+use gym\Notifications\NoticarDieta;
+use gym\User;
+use Illuminate\Support\Facades\Notification;
 
 class Dietas extends Controller
 {
@@ -51,7 +54,11 @@ class Dietas extends Controller
 	        $dieta->altura=$request->input('altura');
 	        $dieta->detalle=$request->input('detalle');
 
-	        $dieta->save();
+			$dieta->save();
+			
+			$users=User::all();
+			Notification::send($users, new NoticarDieta($dieta));
+
             Session::flash('success', $dieta->titulo.' ingresado exitoso.!');
             return redirect()->route('dietas');
 	    }

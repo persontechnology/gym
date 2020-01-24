@@ -255,7 +255,7 @@
                                                             <li id="m_cliente"><a href="{{route('clientes')}}">Clientes</a></li>
                                                             <li id="m_categoria"><a href="{{route('categorias')}}">Categorias</a></li>
                                                             <li id="m_maquina"><a href="{{route('maquinas')}}">Maquinas</a></li>
-                                                            <li id="m_producto"><a href="{{route('productos')}}">Productos</a></li>
+                                                            <li id="m_productor"><a href="{{route('productos')}}">Productos</a></li>
                                                         </ul>
                                                     </li>
 
@@ -414,7 +414,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="copyright">
-                        <p>© 2018 <a href="#">THE SPARTANS GYM</a>. Todos los derechos reservados.</p>
+                        <p>© {{ date('Y') }} <a href="{{ url('/') }}">THE SPARTANS GYM</a>. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>

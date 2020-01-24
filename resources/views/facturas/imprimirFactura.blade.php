@@ -157,11 +157,11 @@ footer {
         <div><a href="">gymspartamachachi@gmail.com</a></div>
       </div>
       <div id="project">
-        <div><span>RUC</span>{{$venta->cliente->cedula}}</div>
-        <div><span>CLIENTE</span> {{$venta->cliente->nombre or ''}} {{$venta->cliente->apellido or ''}}</div>
-        <div><span>DIRECCIÓN</span> {{$venta->cliente->direccion or 'MACHACHI'}}</div>
-        <div><span>TÉLEFONO</span> {{$venta->cliente->telefono or ''}} </div>
-        <div><span>FECHA</span> {{$venta->created_at or ''}}</div>
+        <div><span>RUC</span>{{$venta->cliente->identificacion}}</div>
+        <div><span>CLIENTE</span> {{$venta->cliente->nombre }} {{$venta->cliente->apellido }}</div>
+        <div><span>DIRECCIÓN</span> {{$venta->cliente->direccion ?? 'MACHACHI'}}</div>
+        <div><span>TÉLEFONO</span> {{$venta->cliente->telefono }} </div>
+        <div><span>FECHA</span> {{$venta->created_at}}</div>
         
       </div>
     </header>

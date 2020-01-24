@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Mi dietas
-                        <a href="{{route('salirPagos')}}" class="btn btn-danger">Salir</a>
+                        <a href="{{route('midietaConsulta')}}" class="btn btn-danger">Salir</a>
                     </div>
 
                     <div class="card-body">
@@ -49,6 +49,7 @@
 </div>
 
 <script>
-  $('#m_mipagos').addClass('active');
+  $('#m_midieta').addClass('active');
+    $('#m_consultas').addClass('active');
 </script>
 @endsection

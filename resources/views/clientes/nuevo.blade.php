@@ -98,20 +98,40 @@
                                 </div>
                             </div>
 
-                            <!-- cedula -->
-                            <div class="form-group row">
-                                <label for="cedula" class="col-md-4 col-form-label text-md-right">Cédula</label>
-
-                                <div class="col-md-6">
-                                    <input id="cedula" type="number" class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula" value="{{ old('cedula') }}" required >
-
-                                    @if ($errors->has('cedula'))
-                                        <span class="invalid-feedback">
-                                            <strong>{{ $errors->first('cedula') }}</strong>
-                                        </span>
-                                    @endif
+                            
+                
+                                <div class="form-group row">
+                                    <label for="tipo_identificacion" class="col-md-4 col-form-label text-md-right">Tipo de identificación<i class="text-danger">*</i></label>
+                                    <div class="col-md-6">
+                                        <select id="tipo_identificacion" class="form-control @error('tipo_identificacion') is-invalid @enderror" name="tipo_identificacion" required>
+                                            <option value="Cédula" {{ old('tipo_identificacion')=='Cédula'?'selected':'' }}>Cédula</option>
+                                            <option value="Ruc persona Natural" {{ old('tipo_identificacion')=='Ruc persona Natural'?'selected':'' }}>Ruc persona Natural</option>
+                                            <option value="Ruc Sociedad Pública" {{ old('tipo_identificacion')=='Ruc Sociedad Pública'?'selected':'' }}>Ruc Sociedad Pública</option>
+                                            <option value="Ruc Sociedad Privada" {{ old('tipo_identificacion')=='Ruc Sociedad Privada'?'selected':'' }}>Ruc Sociedad Privada</option>
+                                            <option value="Pasaporte" {{ old('tipo_identificacion')=='Pasaporte'?'selected':'' }}>Pasaporte</option>
+                                            <option value="Otros" {{ old('tipo_identificacion')=='Otros'?'selected':'' }}>Otros</option>
+                                            
+                                        </select>
+                                        @error('tipo_identificacion')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="form-group row">
+                                    <label for="identificacion" class="col-md-4 col-form-label text-md-right">Identificación<i class="text-danger">*</i></label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control @error('identificacion') is-invalid @enderror" id="identificacion" name="identificacion" value="{{ old('identificacion') }}" required placeholder="">
+                                        @error('identificacion')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            
 
                             <!-- telefon -->
                             <div class="form-group row">

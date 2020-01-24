@@ -129,8 +129,8 @@ Route::get('/salir-de-mi-asistecia', function() {
 
 
 // consultas de mi pagos
-Route::get('/igresar-a-mi-pagos/', 'Consultas@miPagos')->name('mipagosConsulta');
-Route::post('/mi-pagos-generar/', 'Consultas@generarMiPagos')->name('generarMiPagos');
+Route::get('/igresar-a-mi-pagos', 'Consultas@miPagos')->name('mipagosConsulta');
+Route::post('/mi-pagos-generar', 'Consultas@generarMiPagos')->name('generarMiPagos');
 Route::get('/mi-pagos-lista/{id}', 'Consultas@mipagosLista')->name('mipagosLista');
 
 

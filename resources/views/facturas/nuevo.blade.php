@@ -142,7 +142,7 @@
                                   <select name="cliente" id="cliente" class="form-control" required="">
                                     <option value=""></option>
                                     @foreach($clientes as $clie)
-                                    <option value="{{$clie->id}}">{{$clie->nombre}} - {{$clie->cedula}}</option>
+                                    <option value="{{$clie->id}}">{{$clie->nombre}} {{$clie->apellido}} - {{$clie->identificacion}}</option>
                                     @endforeach
                                   </select>
                                 </div>

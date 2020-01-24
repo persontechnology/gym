@@ -24,11 +24,8 @@ class Consultas extends Controller
 
     public function generarAsisetncia(Request $request)
     {
-    	$request->validate([
-            'cedula' => 'required|digits_between:10,10',
-        ]);
-
-    	$cliente=User::where('cedula',$request->input('cedula'))->first();
+    	
+    	$cliente=User::where('identificacion',$request->input('cedula'))->first();
     	if ($cliente) {
 
     		$asi=Asistencia::where('created_at',Carbon::today())->first();
@@ -61,7 +58,7 @@ class Consultas extends Controller
     	
     	$value = Session::get('cedulaok');
     	if ($value=='true') {
-    		$cliente=User::where('cedula',$cedula)->first();
+    		$cliente=User::where('identificacion',$cedula)->first();
 	    	if ($cliente) {
 	    		Session::forget('cedulaok');
 	    		return view('consultas.miasistencias',['cliente'=>$cliente]);
@@ -82,14 +79,13 @@ class Consultas extends Controller
 
     public function generarMiPagos(Request $request)
     {
-        $request->validate([
-            'cedula' => 'required|digits_between:10,10',
-        ]);
+        
 
-        $cliente=User::where('cedula',$request->input('cedula'))->first();
+        $cliente=User::where('identificacion',$request->input('cedula'))->first();
         if ($cliente) {
             $request->session()->put('cedulaok', 'true');
-            return redirect()->route('mipagosLista',['clave'=>$cliente->cedula]);
+            return redirect()->route('mipagosLista',$cliente->identificacion);
+            
         }else{
             Session::flash('warning','No existe cliente con dicha información.!');
             return redirect()->route('mipagosConsulta');
@@ -100,7 +96,7 @@ class Consultas extends Controller
     {
         $value = Session::get('cedulaok');
         if ($value=='true') {
-            $cliente=User::where('cedula',$cedula)->first();
+            $cliente=User::where('identificacion',$cedula)->first();
             if ($cliente) {
                 Session::forget('cedulaok');
                 return view('consultas.mipagos',['cliente'=>$cliente]);
@@ -122,11 +118,7 @@ class Consultas extends Controller
 
     public function generarMiDietas(Request $request){
 
-        $request->validate([
-            'cedula' => 'required|digits_between:10,10',
-        ]);
-
-        $cliente=User::where('cedula',$request->input('cedula'))->first();
+        $cliente=User::where('identificacion',$request->input('cedula'))->first();
         if ($cliente) {
 
             // calculo de dietas
@@ -154,7 +146,7 @@ class Consultas extends Controller
                 }
 
                 //$request->session()->put('cedulaok', 'true');
-                return redirect()->route('miDietaGenerarLista',['clave'=>$cliente->cedula]);
+                return redirect()->route('miDietaGenerarLista',$cliente->identificacion);
 
             }else{
                 
@@ -196,7 +188,7 @@ class Consultas extends Controller
     }
 
     public function miDietaGenerarLista($cedula){
-        $cliente=User::where('cedula',$cedula)->first();
+        $cliente=User::where('identificacion',$cedula)->first();
         $listaDieta=Dietah::where('users_id',$cliente->id)->orderBy('created_at','desc')->get();
         $data = array('dietas' => $listaDieta );
         return view('consultas.misdietas',$data);

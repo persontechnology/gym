@@ -98,8 +98,8 @@
 
 
 <script>
-  $('#m_registro').addClass('active');
-  $('#m_maquina').addClass('active');
+    $('#m_dietas').addClass('active');
+    $('#m_asignar_dieta').addClass('active');
    CKEDITOR.replace( 'detalle' );
 
 

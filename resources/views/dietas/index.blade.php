@@ -40,7 +40,7 @@
                               
 
                                 <td>
-                                    <a href="{{route('dietasEditar',['clave'=>$cli->id])}}" class="btn btn-info">Editar</a>
+                                    <a href="{{route('dietasEditar',$cli->id)}}" class="btn btn-info">Editar</a>
                                     <button class="btn btn-danger" type="button" onclick="eliminar(this);" data-url="{{route('dietasEliminar',$cli->id)}}">Eliminar</button>
                                     <a href="{{route('historialDieta',$cli->id)}}" class="btn btn-warning">Historial</a>
                                 </td>
@@ -58,7 +58,8 @@
 </div>
 
 <script>
-  $('m_inicio').addClass('active');
+  $('#m_dietas').addClass('active');
+  $('#m_asignar_dieta').addClass('active');
   function eliminar(argument) {
     alertify.confirm("ESTA SEGURO DE ELIMINAR.","Se perdera toda la información",
     function(){

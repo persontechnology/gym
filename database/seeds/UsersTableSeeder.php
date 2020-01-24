@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use gym\User;
 class UsersTableSeeder extends Seeder
@@ -19,8 +20,9 @@ class UsersTableSeeder extends Seeder
 	            'password' => bcrypt('password'),
 	            'nombre'=>'ADMIN',
 	            'apellido'=>'ADMIN',
-	            'cedula'=>'000000000',
-                'perfil'=>'Administrador'
+	            'identificacion'=>'000000000',
+                'perfil'=>'Administrador',
+                'email_verified_at'=>Carbon::now()
 	        ]);
 
         }

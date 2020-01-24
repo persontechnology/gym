@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Mi asistencia
+                    <div class="card-header">Mi pagos
                         <a href="{{route('salirPagos')}}" class="btn btn-danger">Salir</a>
                     </div>
 
@@ -45,5 +45,6 @@
 
 <script>
   $('#m_mipagos').addClass('active');
+    $('#m_consultas').addClass('active');
 </script>
 @endsection

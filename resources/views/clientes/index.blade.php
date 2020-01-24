@@ -15,11 +15,13 @@
                           <thead>
                             <tr>
                               <th scope="col">#</th>
-                              <th scope="col">Cédula</th>
+                              <th scope="col">Tipo de identificación</th>
+                              <th scope="col">Identificación</th>
                               <th scope="col">Nombres</th>
                               <th scope="col">Apellidos</th>
                               <th scope="col">Télefono</th>
                               <th scope="col">Email</th>
+                              <th scope="col">Estado</th>
                               <th scope="col">Acción</th>
                             </tr>
                           </thead>
@@ -29,11 +31,19 @@
                             @php($i++)
                             <tr >
                               <td >{{$i}}</th>
-                              <td>{{$cli->cedula}}</td>  
+                              <td>{{$cli->tipo_identificacion}}</td>  
+                              <td>{{$cli->identificacion}}</td>  
                               <td>{{$cli->nombre}}</td>
                               <td>{{$cli->apellido}}</td>
                               <td>{{$cli->telefono}}</td>
-                                <td>{{$cli->email}}</td>
+                              <td>{{$cli->email}}</td>
+                              <td>
+                                @if ($cli->estado)
+                                  <span class="badge badge-success">Activo</span>
+                                @else
+                                <span class="badge badge-warning">Inactivo</span>  
+                                @endif
+                              </td>
                                 <td>
 
                                   <!-- cambiar color de boton usd, tiene que revisar boottrap 4-->

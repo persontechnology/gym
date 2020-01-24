@@ -58,7 +58,8 @@
 </div>
 
 <script>
-  $('m_inicio').addClass('active');
+  $('#m_dietas').addClass('active');
+  $('#m_asignar_dieta').addClass('active');
   function eliminar(argument) {
     alertify.confirm("ESTA SEGURO DE ELIMINAR.","Se perdera toda la información",
     function(){

@@ -23,11 +23,34 @@ class RqIngresar extends FormRequest
      */
     public function rules()
     {
+        $rg_tipo_identificacion='';
+        switch ($this->input('tipo_identificacion')) {
+            case 'Cédula':
+                $rg_tipo_identificacion='ecuador:ci|unique:users';
+                break;
+            case 'Ruc persona Natural':
+                $rg_tipo_identificacion='ecuador:ruc|unique:users';
+                break;
+            case 'Ruc Sociedad Pública':
+                $rg_tipo_identificacion='ecuador:ruc_spub|unique:users';
+                break;
+            case 'Ruc Sociedad Privada':
+                $rg_tipo_identificacion='ecuador:ruc_spriv|unique:users';
+                break;
+            case 'Pasaporte':
+                $rg_tipo_identificacion='unique:users';
+                break;
+            case 'Otros':
+                $rg_tipo_identificacion='unique:users';
+                break;
+        }
+
         return [
             'email'=>'required|string|email|max:255|unique:users',
             'nombre' => 'required',
             'apellido'=>'required',
-            'cedula'=>'required|numeric|ecuador:ci|unique:users',
+            'tipo_identificacion'=>'required|in:Cédula,Ruc persona Natural,Ruc Sociedad Pública,Ruc Sociedad Privada,Pasaporte,Otros',
+            'identificacion'=>'required|string|'.$rg_tipo_identificacion,
             'telefono'=>'nullable',
             'direccion'=>'nullable',
         ];

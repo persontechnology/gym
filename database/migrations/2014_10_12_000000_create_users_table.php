@@ -22,7 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('cedula');
+            $table->enum('tipo_identificacion',['Cédula','Ruc persona Natural','Ruc Sociedad Pública','Ruc Sociedad Privada','Pasaporte','Otros'])->default('Cédula');
+            $table->string('identificacion')->nullable();
             $table->string('telefono')->nullable();
             $table->string('direccion')->nullable();
             $table->string('perfil')->default('Cliente');

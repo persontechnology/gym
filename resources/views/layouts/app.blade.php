@@ -266,9 +266,9 @@
                                                         </ul>
                                                     </li>
 
-                                                    <li class="menu-item-has-children"> <a href="#">Dietas</a>
+                                                    <li class="menu-item-has-children" id="m_dietas"> <a href="#">Dietas</a>
                                                         <ul class="sub-menu">                              
-                                                            <li><a href="{{route('dietas')}}">Asignar dieta</a></li>
+                                                            <li id="m_asignar_dieta"><a href="{{route('dietas')}}">Asignar dieta</a></li>
                                                         </ul>
                                                     </li>
 

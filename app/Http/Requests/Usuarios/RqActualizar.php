@@ -23,14 +23,38 @@ class RqActualizar extends FormRequest
      */
     public function rules()
     {
+        $rg_tipo_identificacion='';
+        switch ($this->input('tipo_identificacion')) {
+            case 'Cédula':
+                $rg_tipo_identificacion='ecuador:ci|unique:users,identificacion,'.$this->input('id');
+                break;
+            case 'Ruc persona Natural':
+                $rg_tipo_identificacion='ecuador:ruc|unique:users,identificacion,'.$this->input('id');
+                break;
+            case 'Ruc Sociedad Pública':
+                $rg_tipo_identificacion='ecuador:ruc_spub|unique:users,identificacion,'.$this->input('id');
+                break;
+            case 'Ruc Sociedad Privada':
+                $rg_tipo_identificacion='ecuador:ruc_spriv|unique:users,identificacion,'.$this->input('id');
+                break;
+            case 'Pasaporte':
+                $rg_tipo_identificacion='unique:users,identificacion,'.$this->input('id');
+                break;
+            case 'Otros':
+                $rg_tipo_identificacion='unique:users,identificacion,'.$this->input('id');
+                break;
+        }
+
         return [
             'id'=>'required',
             'email'=>'required|string|email|max:255|unique:users,email,'.$this->input('id'),
             'nombre' => 'required',
             'apellido'=>'required',
-            'cedula'=>'required|numeric|ecuador:ci|unique:users,cedula,'.$this->input('id'),
+            'tipo_identificacion'=>'required|in:Cédula,Ruc persona Natural,Ruc Sociedad Pública,Ruc Sociedad Privada,Pasaporte,Otros',
+            'identificacion'=>'required|string|'.$rg_tipo_identificacion,
             'telefono'=>'nullable',
             'direccion'=>'nullable',
+            'estado'=>'required|in:1,0'
         ];
     }
 

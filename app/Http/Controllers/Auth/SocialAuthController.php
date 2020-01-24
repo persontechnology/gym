@@ -37,7 +37,7 @@ class SocialAuthController extends Controller
                 'avatar' => $social_user->avatar,
                 'nombre'=>$social_user->name,
                 'apellido'=>'',
-                'cedula'=>'',
+                'identificacion'=>'',
                 'perfil'=>'Cliente',
                 'email_verified_at'=>Carbon::now()
             ]);

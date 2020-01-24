@@ -14,10 +14,9 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="cedula" class="col-sm-4 col-form-label text-md-right">Cédula</label>
+                                <label for="cedula" class="col-sm-4 col-form-label text-md-right">Identificación</label>
                                 <div class="col-md-6">
-                                    <input id="cedula" type="text" class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula" value="{{ old('cedula') }}" placeholder="Ingrese cédula" required autofocus>
-
+                                    <input id="cedula" type="text" class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula" value="{{ old('cedula') }}" placeholder="Ingrese identificación" required autofocus>
                                     @if ($errors->has('cedula'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('cedula') }}</strong>

@@ -6,8 +6,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de rutinas
-                        <a href="{{route('rutinas')}}">atras</a>
+                    <div class="card-header">Administración de rutinas
+                        <a href="{{route('rutinas')}}">Atrás</a>
                     </div>
 
                     <div class="card-body">

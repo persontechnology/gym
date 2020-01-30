@@ -12,8 +12,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de maquinas
-                        <a href="{{route('maquinas')}}">atras</a>
+                    <div class="card-header">Administración de maquinas
+                        <a href="{{route('maquinas')}}">Atrás</a>
                     </div>
 
                     <div class="card-body">

@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de rutinas
+                    <div class="card-header">Administración de rutinas
                         <a href="{{route('nuevoRutina')}}">Nueva rutinas</a>
                     </div>
 

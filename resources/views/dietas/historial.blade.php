@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Dietas
-                        <a href="{{route('dietas')}}" class="btn btn-info">atras</a>
+                        <a href="{{route('dietas')}}" class="btn btn-info">Atrás</a>
                     </div>
 
                     <div class="card-body">
@@ -16,7 +16,7 @@
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Fecha ingreso</th>
-                              <th scope="col">Titulo</th>
+                              <th scope="col">Título</th>
                               <th scope="col">Peso</th>
                               <th scope="col">Altura</th>
                               <th scope="col">Masa corporal (peso/altura <sup>2</sup> )</th>

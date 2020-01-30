@@ -6,9 +6,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de asistencias
+                    <div class="card-header">Administración de asistencias
                         
-                        <a href="{{route('asistencias')}}">atras</a>
+                        <a href="{{route('asistencias')}}">Atrás</a>
 
 
                     </div>

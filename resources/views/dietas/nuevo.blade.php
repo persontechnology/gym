@@ -11,8 +11,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de dietas
-                        <a href="{{route('dietas')}}">atras</a>
+                    <div class="card-header">Administración de dietas
+                        <a href="{{route('dietas')}}">Atrás</a>
                     </div>
 
                     <div class="card-body">

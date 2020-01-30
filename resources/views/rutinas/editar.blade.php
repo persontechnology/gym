@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Editar rutinas
-                        <a href="{{route('rutinas')}}">atras</a>
+                        <a href="{{route('rutinas')}}">Atrás</a>
                     </div>
 
                     <div class="card-body">

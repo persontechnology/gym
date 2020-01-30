@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de clientes
+                    <div class="card-header">Administración de clientes
                         <a href="{{route('nuevoCliente')}}">Nuevo cliente</a>
                     </div>
 
@@ -19,7 +19,7 @@
                               <th scope="col">Identificación</th>
                               <th scope="col">Nombres</th>
                               <th scope="col">Apellidos</th>
-                              <th scope="col">Télefono</th>
+                              <th scope="col">Teléfono</th>
                               <th scope="col">Email</th>
                               <th scope="col">Estado</th>
                               <th scope="col">Acción</th>

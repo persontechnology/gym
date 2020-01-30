@@ -20,8 +20,8 @@
                               <th scope="col">Marca</th>
                               <th scope="col">Estado</th>
                               <th scope="col">Foto</th>
-                              <th scope="col">Observació</th>
-                              <th scope="col">Categoria</th>
+                              <th scope="col">Observación</th>
+                              <th scope="col">Categoría</th>
                               <th scope="col">Acción</th>
                             </tr>
                           </thead>

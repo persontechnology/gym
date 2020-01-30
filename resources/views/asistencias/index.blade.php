@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de asistencias
+                    <div class="card-header">Administración de asistencias
                         
                         <button class="btn btn-success" type="button" onclick="nuevo(this);" data-url="{{route('asistenciasNuevo')}}" >Nueva asistencia</button>
 
@@ -33,7 +33,7 @@
                               
 
                                 <td>
-                                    <a href="{{route('listadoAsistencia',$cli->id)}}" class="btn btn-warning">Listado</a>
+                                    <a href="{{route('listadoAsistencia',$cli->id)}}" class="btn btn-warning">Reporte</a>
                                     
                                     <button class="btn btn-danger" type="button" onclick="eliminar(this);" data-url="{{route('eliminarAsistencia',$cli->id)}}" >Eliminar</button>
                                 </td>

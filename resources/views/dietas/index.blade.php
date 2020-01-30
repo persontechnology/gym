@@ -16,7 +16,7 @@
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Fecha ingreso</th>
-                              <th scope="col">Titulo</th>
+                              <th scope="col">Título</th>
                               <th scope="col">Peso</th>
                               <th scope="col">Altura</th>
                               <th scope="col">Masa corporal</th>

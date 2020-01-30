@@ -12,12 +12,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if (User::where('email', '=', 'admin@admin.com')->first() === null) {
+        if (User::where('email', '=', 'spartansgym2020@gmail.com')->first() === null) {
 
 	        User::create([
 	            'name' => 'Admin',
-	            'email' => 'admin@admin.com',
-	            'password' => bcrypt('password'),
+	            'email' => 'spartansgym2020@gmail.com',
+	            'password' => bcrypt('1708546161'),
 	            'nombre'=>'ADMIN',
 	            'apellido'=>'ADMIN',
 	            'identificacion'=>'000000000',

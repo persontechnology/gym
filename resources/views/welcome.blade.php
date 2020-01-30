@@ -89,7 +89,7 @@
                                 </a>
                             </div>
                             <div class="course-body">
-                                <a href="#" class="course-category">BAILOTERAPÍA</a>
+                                <a href="#" class="course-category">ENTRENAMIENTO DE BRAZOS</a>
                                 <h4 class="course-title"><a href="#"> </a></h4>
                                 <div class="course-desc">
                                     <p>
@@ -109,7 +109,7 @@
                                 </a>
                             </div>
                             <div class="course-body">
-                                <a href="#" class="course-category">ENTRENAMIENTO FUNCIONAL</a>
+                                <a href="#" class="course-category">ENTRENAMIENTO DE PIERNAS</a>
                                 <h4 class="course-title"><a href="#"> </a></h4>
                                 <div class="course-desc">
                                     <p>
@@ -129,7 +129,7 @@
                                 </a>
                             </div>
                             <div class="course-body">
-                                <a href="#" class="course-category">FÍSICO CULTURISMO</a>
+                                <a href="#" class="course-category">ENTRENAMIENTO DE TRICEPS</a>
                                 <h4 class="course-title"><a href="#"> </a></h4>
                                 <div class="course-desc">
                                     <p>

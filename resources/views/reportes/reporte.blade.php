@@ -87,17 +87,20 @@
                         data: [
                             @php
                                 $i=0;
+                                $mesesN=array(1=>"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
+                                "Agosto","Septiembre","Octubre","Noviembre","Diciembre");
                             @endphp
                         @foreach ($dietas as $dieta)
-                            
-                           
-                        {
-                            name: '{{$dieta->dieta->titulo.'-'.Carbon\Carbon::parse($dieta->created_at)->format('d-M-Y')}}',
-                            low: {{number_format($dieta->peso/pow($dieta->altura,2),4) }}
-                        },
                         @php
                             $i++;
+                            
                         @endphp
+                           
+                        {
+                            name: '{{$dieta->dieta->titulo.'-'.date('d',strtotime($dieta->created_at)).'-'.$mesesN[date('n',strtotime($dieta->created_at))].'-'.date('Y',strtotime($dieta->created_at))}}',
+                            low: {{number_format($dieta->peso/pow($dieta->altura,2),4) }}
+                        },
+                       
                         @endforeach 
                         ]
                     }

@@ -46,7 +46,7 @@
                             <div class="form-group row">
                                 <label for="altura" class="col-sm-4 col-form-label text-md-right">Altura</label>
                                 <div class="col-md-6">
-                                    <input id="altura" type="number" class="form-control{{ $errors->has('altura') ? ' is-invalid' : '' }}" name="altura" value="{{ old('altura') }}" placeholder="Ingrese altura" required autofocus>
+                                    <input id="altura" type="text" class="form-control{{ $errors->has('altura') ? ' is-invalid' : '' }}" name="altura" value="{{ old('altura') }}" placeholder="Ingrese altura" required autofocus>
                                     @if ($errors->has('altura'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('altura') }}</strong>
@@ -126,7 +126,8 @@
                 money:true
             },
             altura:{
-                money:true
+                money:true,
+                
             }
         },
         errorElement: "em",

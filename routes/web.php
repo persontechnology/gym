@@ -197,7 +197,7 @@ Route::get('/reservas-eliminar/{id}', 'Reservas@eliminar')->name('eliminarReserv
 Route::namespace('Movil')->group(function () {
     //Ingresar desde el telefono
     Route::get('/login-app/{emnail}/{password}', 'Login@ingresar')->name('ingresarApp');  
-
+    Route::get('/login-app-facebook/{email}/{names}', 'Login@ingresarFacebook')->name('ingresarAppFacebook');
 
     // consultas de  aistencia por id de usuario
     Route::get('/app-mis-asistenicas/{user}', 'Consultas@misAsistencias')->name('misAsistencias');  
@@ -210,6 +210,8 @@ Route::namespace('Movil')->group(function () {
     
     
 });
+
+Route::get('/mi-estadistica/{user}', 'Reportes@estaditicasDias')->name('miReporte');
 
 
 

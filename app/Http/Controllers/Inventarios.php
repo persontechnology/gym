@@ -30,7 +30,7 @@ class Inventarios extends Controller
 			$inventario->save();
 
     		Session::flash('success', ' actualizado exitoso.!');
-            return redirect()->route('inventario',['clave'=>$request->input('id')]);
+            return redirect()->route('inventario',$request->input('id'));
     	}
     	return view('error');
     }
@@ -75,7 +75,7 @@ class Inventarios extends Controller
             $inventario->save();
 
             Session::flash('success', ' actualizado exitoso.!');
-            return redirect()->route('inventarioMaquinas',['clave'=>$request->input('id')]);
+            return redirect()->route('inventarioMaquinas',$request->input('id'));
         }
         return view('error');
     }
@@ -93,7 +93,7 @@ class Inventarios extends Controller
             
             }
 
-        return redirect()->route('inventarioMaquinas',['clave'=>$inventario->maquina->id]);
+        return redirect()->route('inventarioMaquinas',$inventario->maquina->id);
             
         }
         return view('error');   

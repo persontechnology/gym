@@ -4280,6 +4280,7 @@ return array(
     'gym\\Inventario' => $baseDir . '/app/Inventario.php',
     'gym\\Lista' => $baseDir . '/app/Lista.php',
     'gym\\Maquina' => $baseDir . '/app/Maquina.php',
+    'gym\\Notifications\\NoticarDieta' => $baseDir . '/app/Notifications/NoticarDieta.php',
     'gym\\Pago' => $baseDir . '/app/Pago.php',
     'gym\\Producto' => $baseDir . '/app/Producto.php',
     'gym\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

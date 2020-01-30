@@ -27,4 +27,28 @@ class Login extends Controller
         }
         return response()->json(null);
     }
+    public function ingresarFacebook($email,$names)
+    {
+        $user=User::where('email',$email)->first();
+        if(!$user){
+            $user=new User();
+            $user->name = $names;
+            $user->email = $email;
+            $user->password = Hash::make($email);
+            $user->nombre=$names;
+            $user->apellido='';
+            $user->identificacion='';
+            $user->perfil='Cliente';
+            $user->email_verified_at=Carbon::now();
+            $user->save();   
+        }
+        $data = array(
+            'id' => $user->id ,
+            'name'=>$user->name,
+            'email'=>$user->email,
+            'state_user'=>true,
+            'perfil'=>$user->perfil
+        );
+        return response()->json($data);
+    }
 }

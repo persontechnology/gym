@@ -206,7 +206,7 @@
                 <!-- Header Top End -->
 
                 <!-- Menu Start -->
-                <div class="menu-area menu-sticky">
+                <div class="menu-area menu-sticky rounded">
                     <div class="container">
                         <div class="main-menu">
                             <div class="row">
@@ -215,8 +215,8 @@
                                         <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                                     </div> -->
                                     <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
-                                    <nav class="rs-menu">
-                                        <ul class="nav-menu">
+                                    <nav class="rs-menu  rounded">
+                                        <ul class="nav-menu rounded">
                                             <!-- Home -->
                                             <li class="" id="m_inicio"> <a href="{{url('/')}}" class="home">Inicio</a></li>
 
@@ -328,7 +328,7 @@
 
        
         <!-- Footer Start -->
-        <footer id="rs-footer" class="bg3 rs-footer">
+        <footer id="rs-footer" class="bg3 rs-footer rounded">
             <div class="container">
                 <!-- Footer Address -->
                 <div>

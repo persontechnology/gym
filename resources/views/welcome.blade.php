@@ -83,7 +83,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="cource-item">
                             <div class="cource-img">
-                                <a href="#"><img src="{{asset('images/courses/BAILOTERAPIA.png')}}" alt="" /></a>
+                                <a href="#"><img src="{{asset('images/courses/BAILOTERAPIA.jpeg')}}" alt="" /></a>
                                 <a class="image-link" href="#" title="">
                                     <i class="fa fa-link"></i>
                                 </a>
@@ -103,7 +103,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="cource-item">
                             <div class="cource-img">
-                                <img src="{{asset('images/courses/entrenamiento funcional.png')}}" alt="" />
+                                <img src="{{asset('images/courses/entrenamiento.jpeg')}}" alt="" />
                                 <a class="image-link" href="#" title="University Tour 2018">
                                     <i class="fa fa-link"></i>
                                 </a>
@@ -123,7 +123,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="cource-item">
                             <div class="cource-img">
-                                <img src="{{asset('images/courses/fisico culturismo.png')}}" alt="" />
+                                <img src="{{asset('images/courses/culturismo.jpeg')}}" alt="" />
                                 <a class="image-link" href="#" title="University Tour 2018">
                                     <i class="fa fa-link"></i>
                                 </a>

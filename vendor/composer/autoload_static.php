@@ -4771,6 +4771,7 @@ class ComposerStaticInit022a01ead18bb5a37fa01a1de57cf59f
         'gym\\Inventario' => __DIR__ . '/../..' . '/app/Inventario.php',
         'gym\\Lista' => __DIR__ . '/../..' . '/app/Lista.php',
         'gym\\Maquina' => __DIR__ . '/../..' . '/app/Maquina.php',
+        'gym\\Notifications\\NoticarDieta' => __DIR__ . '/../..' . '/app/Notifications/NoticarDieta.php',
         'gym\\Pago' => __DIR__ . '/../..' . '/app/Pago.php',
         'gym\\Producto' => __DIR__ . '/../..' . '/app/Producto.php',
         'gym\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

@@ -6,8 +6,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administracion de pagos
-                        <a href="{{route('clientes')}}">atras</a>
+                    <div class="card-header">Administración de pagos
+                        <a href="{{route('clientes')}}">Atrás</a>
                         
                       <!--   <div class="alert alert-danger" role="alert">
                           <strong>Ingresar nuevo pago</strong>

@@ -253,7 +253,7 @@
                                                     <li class="menu-item-has-children" id="m_registro"> <a href="#">Registros</a>
                                                         <ul class="sub-menu">
                                                             <li id="m_cliente"><a href="{{route('clientes')}}">Clientes</a></li>
-                                                            <li id="m_categoria"><a href="{{route('categorias')}}">Categorias</a></li>
+                                                            <li id="m_categoria"><a href="{{route('categorias')}}">Categorías</a></li>
                                                             <li id="m_maquina"><a href="{{route('maquinas')}}">Maquinas</a></li>
                                                             <li id="m_productor"><a href="{{route('productos')}}">Productos</a></li>
                                                         </ul>

@@ -51,7 +51,7 @@ class Clientes extends Controller
         	$user=new User;
     		$user->name = 'name';
             $user->email = $request->input('email');
-            $user->password = Hash::make($request->input('cedula'));
+            $user->password = Hash::make($request->input('identificacion'));
             $user->nombre = $request->input('nombre');
             $user->apellido=$request->input('apellido');
             $user->tipo_identificacion=$request->tipo_identificacion;

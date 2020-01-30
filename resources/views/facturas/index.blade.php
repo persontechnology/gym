@@ -17,7 +17,7 @@
                               
   
                               <th scope="col">#</th>
-                              <th scope="col">Factura</th>
+                              <th scope="col">Comprobante</th>
                               <th scope="col">Estado</th>
                               <th scope="col">Total</th>
                               <th scope="col">Cliente</th>

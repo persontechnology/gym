@@ -100,10 +100,10 @@
 
 
                               <div class="form-group" id="selectMeses" style="display: none;">
-                                <label for="sel1">Selecionar mes:</label>
+                                <label for="sel1">Seleccionar mes:</label>
                                 
                                 <select class="form-control" id="mespago" name="mespago">
-                                  <option value="">Selecione mes de pago</option>
+                                  <option value="">Seleccione mes de pago</option>
                                   <option value="Enero{{date('Y')}}">Enero {{date('Y')}}</option>
                                   <option value="Febrero{{date('Y')}}">Febrero {{date('Y')}}</option>
                                   <option value="Marzo{{date('Y')}}">Marzo {{date('Y')}}</option>
@@ -138,7 +138,7 @@
                                 
 
                                 <div class="col-md-6">
-                                  <label for="cliente" class="col-md-12 col-form-label">Selecion Cliente</label>
+                                  <label for="cliente" class="col-md-12 col-form-label">Selección Cliente</label>
                                   <select name="cliente" id="cliente" class="form-control" required="">
                                     <option value=""></option>
                                     @foreach($clientes as $clie)

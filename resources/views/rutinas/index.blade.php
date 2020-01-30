@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Administración de rutinas
-                        <a href="{{route('nuevoRutina')}}">Nueva rutinas</a>
+                        <a href="{{route('nuevoRutina')}}">Nueva rutina</a>
                     </div>
 
                     <div class="card-body">
@@ -19,7 +19,7 @@
                               <th scope="col">Nombre</th>
                               <th scope="col">Descripción</th>
                               <th scope="col">Hora de incio</th>
-                              <th scope="col">hora de finalización</th>
+                              <th scope="col">Hora de finalización</th>
                               <th scope="col">Días</th>
                               <th scope="col">Estado</th>
                               <th scope="col">Acciones</th>

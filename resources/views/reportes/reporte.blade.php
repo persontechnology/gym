@@ -101,7 +101,11 @@
                         @endforeach 
                         ]
                     }
-            ]
+            ],
+
+            exporting: {
+                enabled: false
+            }
         
         });
     </script>

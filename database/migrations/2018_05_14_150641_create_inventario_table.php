@@ -23,8 +23,8 @@ class CreateInventarioTable extends Migration
             $table->unsignedBigInteger('maquina_id')->nullable();
             $table->unsignedBigInteger('producto_id')->nullable();
 
-            $table->foreign('maquina_id')->references('id')->on('maquina')->onDelete('cascade');
-            $table->foreign('producto_id')->references('id')->on('producto')->onDelete('cascade');
+            $table->foreign('maquina_id')->references('id')->on('maquina');
+            $table->foreign('producto_id')->references('id')->on('producto');
 
         });
     }

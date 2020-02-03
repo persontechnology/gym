@@ -24,7 +24,7 @@ class CreateMaquinaTable extends Migration
             $table->string('observacion')->default();
             
             $table->unsignedBigInteger('categoria_id')->nullable();
-            $table->foreign('categoria_id')->references('id')->on('categoria')->onDelete('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categoria');
 
 
         });

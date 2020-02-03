@@ -21,8 +21,8 @@ class CreateListaTable extends Migration
             $table->unsignedBigInteger('asistencia_id')->nullable();
             $table->unsignedBigInteger('users_id')->nullable();
 
-            $table->foreign('asistencia_id')->references('id')->on('asistencia')->onDelete('cascade');
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('asistencia_id')->references('id')->on('asistencia');
+            $table->foreign('users_id')->references('id')->on('users');
 
 
 

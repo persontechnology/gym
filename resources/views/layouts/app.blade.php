@@ -111,8 +111,9 @@
                                     @guest
                                         <i class="fa fa-bank"></i><span>Bienvenido a THE SPARTANS GYM</span> 
                                     @else
-                                        <i class="fa fa-user"></i>  <span> {{ Auth::user()->nombre }}  {{ Auth::user()->apellido}} <b>Perfil: </b>{{ Auth::user()->perfil }}</span> 
-                                    
+                                    <a href="{{ route('miperfil') }}">
+                                    <i class="fa fa-user"></i>  <span> {{ Auth::user()->nombre }}  {{ Auth::user()->apellido}} <b>Perfil: </b>{{ Auth::user()->perfil }}</span> 
+                                    </a>    
                                     @endguest
 
                                 </div>

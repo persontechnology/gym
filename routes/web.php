@@ -42,6 +42,11 @@ Auth::routes(['verify' => true]);
 Route::middleware(['verified', 'auth'])->group(function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/mi-perfil', 'HomeController@miperfil')->name('miperfil');
+Route::post('/mi-perfil-actualizar', 'HomeController@actualizarMiperfil')->name('actualizarMiperfil');
+
+
+
 
 Route::get('/clientes-index', 'Clientes@index')->name('clientes');
 Route::get('/clientes-nuevo', 'Clientes@nuevo')->name('nuevoCliente');

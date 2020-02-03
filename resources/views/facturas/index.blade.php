@@ -40,9 +40,9 @@
                                 @endif
                               </td>
                               <td>{{$cli->total}}</td>
-                              <td>{{$cli->cliente->nombre}} {{$cli->cliente->apellido}} </td>
+                              <td>{{$cli->cliente->nombre??''}} {{$cli->cliente->apellido??''}} </td>
                               <td>
-                                  {{ $cli->cliente->identificacion }}
+                                  {{ $cli->cliente->identificacion??'' }}
                               </td>
 
                                 <td>

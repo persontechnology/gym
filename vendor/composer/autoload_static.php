@@ -4756,6 +4756,7 @@ class ComposerStaticInit022a01ead18bb5a37fa01a1de57cf59f
         'gym\\Http\\Controllers\\Movil\\Login' => __DIR__ . '/../..' . '/app/Http/Controllers/Movil/Login.php',
         'gym\\Http\\Controllers\\Pagos' => __DIR__ . '/../..' . '/app/Http/Controllers/Pagos.php',
         'gym\\Http\\Controllers\\Productos' => __DIR__ . '/../..' . '/app/Http/Controllers/Productos.php',
+        'gym\\Http\\Controllers\\Reportes' => __DIR__ . '/../..' . '/app/Http/Controllers/Reportes.php',
         'gym\\Http\\Controllers\\Reservas' => __DIR__ . '/../..' . '/app/Http/Controllers/Reservas.php',
         'gym\\Http\\Controllers\\Rutinas' => __DIR__ . '/../..' . '/app/Http/Controllers/Rutinas.php',
         'gym\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

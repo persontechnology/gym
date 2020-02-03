@@ -23,9 +23,9 @@ class CreateDetallefacturaTable extends Migration
             $table->unsignedBigInteger('producto_id')->nullable();
             $table->unsignedBigInteger('pago_id')->nullable();
 
-            $table->foreign('pago_id')->references('id')->on('pago')->onDelete('cascade');
-            $table->foreign('factura_id')->references('id')->on('factura')->onDelete('cascade');
-            $table->foreign('producto_id')->references('id')->on('producto')->onDelete('cascade');
+            $table->foreign('pago_id')->references('id')->on('pago');
+            $table->foreign('factura_id')->references('id')->on('factura');
+            $table->foreign('producto_id')->references('id')->on('producto');
         });
     }
 

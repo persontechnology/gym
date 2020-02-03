@@ -22,7 +22,7 @@ class CreatePagoTable extends Migration
 
             
             $table->unsignedBigInteger('users_id')->nullable();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('users_id')->references('id')->on('users');
 
         });
     }

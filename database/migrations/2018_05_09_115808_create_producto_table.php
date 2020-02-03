@@ -26,7 +26,7 @@ class CreateProductoTable extends Migration
             $table->string('descripcion')->nullable();
 
             $table->unsignedBigInteger('categoria_id')->nullable();
-            $table->foreign('categoria_id')->references('id')->on('categoria')->onDelete('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categoria');
 
         });
     }

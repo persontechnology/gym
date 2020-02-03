@@ -54,7 +54,7 @@ class RqActualizar extends FormRequest
             'identificacion'=>'required|string|'.$rg_tipo_identificacion,
             'telefono'=>'nullable',
             'direccion'=>'nullable',
-            'estado'=>'required|in:1,0'
+            'estado'=>'nullable|in:1,0'
         ];
     }
 

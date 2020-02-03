@@ -20,10 +20,10 @@ class CreateDietahTable extends Migration
             $table->decimal('altura',9,2);
 
             $table->unsignedBigInteger('users_id')->nullable();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('users_id')->references('id')->on('users');
 
             $table->unsignedBigInteger('dieta_id')->nullable();
-            $table->foreign('dieta_id')->references('id')->on('dieta')->onDelete('cascade');
+            $table->foreign('dieta_id')->references('id')->on('dieta');
 
 
         });

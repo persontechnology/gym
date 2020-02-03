@@ -4265,6 +4265,7 @@ return array(
     'gym\\Http\\Controllers\\Movil\\Login' => $baseDir . '/app/Http/Controllers/Movil/Login.php',
     'gym\\Http\\Controllers\\Pagos' => $baseDir . '/app/Http/Controllers/Pagos.php',
     'gym\\Http\\Controllers\\Productos' => $baseDir . '/app/Http/Controllers/Productos.php',
+    'gym\\Http\\Controllers\\Reportes' => $baseDir . '/app/Http/Controllers/Reportes.php',
     'gym\\Http\\Controllers\\Reservas' => $baseDir . '/app/Http/Controllers/Reservas.php',
     'gym\\Http\\Controllers\\Rutinas' => $baseDir . '/app/Http/Controllers/Rutinas.php',
     'gym\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

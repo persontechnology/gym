@@ -67,7 +67,7 @@
         
         <!-- Search Courses End -->
 
-  
+        
 
         <!-- Courses Start -->
         <div id="rs-courses-2" class="rs-courses-2 sec-spacer">
@@ -146,6 +146,17 @@
         <!-- Courses End -->
 
 
+        <div id="rs-courses-2" class="rs-courses-2 sec-spacer">
+            <div class="container">
+                <div class="sec-title mb-50">
+                    <h2>DESCARGA NUESTRO APLICACIÓN MOVIL</h2>      
+                    <p>
+                        Aplicación movil:
+                    </p>
+                <a href="{{ url('apk/com.companyname.app_gym.apk')}}" target="_blank">Descargar APK ANDROID</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Team Start -->
         <div id="rs-team" class="rs-team sec-color sec-spacer mt-0">

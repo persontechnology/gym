@@ -154,6 +154,7 @@
                         Aplicación movil:
                     </p>
                 <a href="{{ url('apk/com.companyname.app_gym.apk')}}" target="_blank">Descargar APK ANDROID</a>
+                <img src="{{ asset('apk/qrcode_spartagym.png') }}" alt="sss" class="img img-fluid">
                 </div>
             </div>
         </div>

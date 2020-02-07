@@ -34,44 +34,51 @@ class Facturas extends Controller
             return view('facturas.index',$data);
         }
         return view('error');
-    	
+
     }
 
     public function nuevo()
     {
         if (Auth::user()->perfil=="Administrador") {
-            
+
+            $factura_u=Factura::latest('factura')->first();
+            if($factura_u){
+                $factura_u=$factura_u->factura +1;
+            }else{
+                $factura_u=1;
+            }
             $data=array(
                 'productos'=>Producto::all(),
-                'clientes'=>User::all()
+                'clientes'=>User::all(),
+                'factura_u'=>$factura_u
             );
 
             return view('facturas.nuevo',$data);
         }
         return view('error');
-        
+
     }
 
     public function finalizar(Request $request)
     {
         if (Auth::user()->perfil=="Administrador") {
-          
+
             $idsProductos=$request->input('idproductosventa');
             $cantidadesProductos=$request->input('cantidadesventa');
 
-            
+
 
             $venta=new Factura;
             $venta->factura=$request->input('numeroFactura');
             $venta->user_id=$request->input('cliente');
             $venta->save();
-            
+
             $i=0;
             $venta->total=0;
             foreach ($idsProductos as $pro) {
 
                 $detalleFactura=new DetalleFactura;
-                
+
                 if ($pro=="pago") {
                     $mes=$cantidadesProductos[$i];
                     $pago=Pago::where('fecha',$mes)->where('users_id',$request->input('cliente'))->first();
@@ -93,7 +100,7 @@ class Facturas extends Controller
                          Session::flash('error', 'No se genero la factura al cliente, porque ya existe.!');
                     }
 
-                    
+
 
                 }else{
                     $producto=Producto::find($pro);
@@ -107,7 +114,7 @@ class Facturas extends Controller
                 }
 
 
-                
+
                 $detalleFactura->factura_id=$venta->id;
                 $detalleFactura->save();
                 $venta->save();
@@ -151,7 +158,7 @@ class Facturas extends Controller
         if (Auth::user()->perfil=='Administrador') {
                 try {
                     Factura::destroy($id);
-                    
+
                     Session::flash('error', 'Factura eliminado exitoso.!');
                     return redirect()->route('facturas');
 

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use gym\DetalleFactura;
 class Factura extends Model
 {
+
+
+
     protected $table='factura';
 
     public function cliente()

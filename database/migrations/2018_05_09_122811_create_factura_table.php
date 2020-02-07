@@ -16,10 +16,10 @@ class CreateFacturaTable extends Migration
         Schema::create('factura', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('factura');
+            $table->integer('factura');
             $table->boolean('estado')->default(true);
             $table->decimal('total',9,2)->default(0);
-            
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 

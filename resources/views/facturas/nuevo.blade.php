@@ -14,7 +14,7 @@
                        @if(Session::has('ventaok'))
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                           <strong>{{Session::get('ventaok')['mensajeVentaOk']}}</strong>
-                          
+
                           <a href="{{route('imprimirFacturaVenta',Session::get('ventaok')['idVenta'])}}" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-print"></i> IMPRIMIR COMPROBANTE </a>
 
                           <button type="button" class="btn btn-danger btn-lg" data-dismiss="alert" aria-label="Close">
@@ -23,7 +23,7 @@
                         </div>
 
                       @endif
-                      
+
                       <div class="row">
                         <div class="col-6">
 
@@ -36,10 +36,10 @@
                           <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-                            
 
 
-                            
+
+
 
 
 
@@ -51,9 +51,9 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Cantidad disponible</th>
-                                    
+
                                     <th scope="col">Precio Venta</th>
-                                    
+
                                     <th scope="col">Foto</th>
                                     <th scope="col">Cantidad a vender</th>
                                     <th scope="col">Acción</th>
@@ -67,10 +67,10 @@
                                     <td >{{$i}}</th>
                                     <td id="txtnombre{{$cli->id}}">{{$cli->nombre}}</td>
                                     <td id="txtCantidadSistema{{$cli->id}}">{{$cli->cantidad}}</td>
-                                    
+
                                     <td id="txtprecio{{$cli->id}}">{{$cli->precioVenta}}</td>
-                                    
-                                   
+
+
                                     <td>
                                       @if($cli->foto)
                                       <img src="{{Storage::url('public/images/productos/'.$cli->foto)}}" alt="" width="60px;">
@@ -84,24 +84,24 @@
                                           <button class="btn btn-success btn-sm" type="button" data-cantidad="{{$cli->cantidad}}" data-id="{{$cli->id}}" onclick="cargarProducto(this);">Vender</button>
                                       </td>
                                   </tr>
-            
+
                                   @endforeach
-                                 
+
                                 </tbody>
                               </table>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                              
+
                               <div class="form-group">
                                 <label for="sel1">Ingrese valor del mes:</label>
-                                <input type="number" name="totalMes" id="totalMes" value="0" class="form-control">
+                                <input type="number" name="totalMes" id="totalMes" value="20" class="form-control" readonly>
 
                               </div>
 
 
                               <div class="form-group" id="selectMeses" style="display: none;">
                                 <label for="sel1">Seleccionar mes:</label>
-                                
+
                                 <select class="form-control" id="mespago" name="mespago">
                                   <option value="">Seleccione mes de pago</option>
                                   <option value="Enero{{date('Y')}}">Enero {{date('Y')}}</option>
@@ -116,26 +116,26 @@
                                   <option value="Octubre{{date('Y')}}">Octubre {{date('Y')}}</option>
                                   <option value="Noviembre{{date('Y')}}">Noviembre {{date('Y')}}</option>
                                   <option value="Diciemre{{date('Y')}}">Diciemre {{date('Y')}}</option>
-                                  
-                                  
+
+
                                 </select>
 
                               </div>
 
 
 
-                              
+
                             </div>
                           </div>
-                        
-                            
+
+
 
                         </div>
                         <div class="col-6">
                           <form action="{{route('finalizarFactura')}}" method="post" id="procesarVenta">
                               @csrf
                             <div class="form-group row">
-                                
+
 
                                 <div class="col-md-6">
                                   <label for="cliente" class="col-md-12 col-form-label">Selección Cliente</label>
@@ -149,7 +149,7 @@
 
                                 <div class="col-md-6">
                                   <label for="numeroFactura" class="col-md-12 col-form-label">Número de comprobante</label>
-                                  <input type="number" class="form-control form-control-sm" name="numeroFactura" id="numeroFactura" placeholder="Ingrese #" required="">
+                                  <input type="number" value="{{ $factura_u}}" class="form-control form-control-sm" name="numeroFactura" id="numeroFactura" placeholder="Ingrese #" required="">
                                 </div>
                               </div>
 
@@ -167,7 +167,7 @@
                                   </tr>
                                 </thead>
                                 <tbody id="detalleFactura">
-                                  
+
                                 </tbody>
                                 <tfoot>
                                   <tr>
@@ -182,12 +182,12 @@
                               <a href="{{route('facturas')}}" class="btn btn-danger btn-lg pull-right">Cancelar venta</a>
                               <button class="btn btn-info btn-lg pull-right" type="submit">Finalizar venta</button>
                             </div>
-                            
+
 
                           </form>
                         </div>
                       </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
 <script>
   $('#m_mensual').addClass('active');
   $('#m_factura').addClass('active');
-  
+
   $('#cliente').select2();
 
 
@@ -219,7 +219,7 @@ $('#procesarVenta').validate({
   },
   errorElement: "em",
   submitHandler:function(form){
-    
+
 
     alertify.confirm("ESTA SEGURO DE FINALIZAR LA VENTA.","TOTAL VENTA: $ "+total.toFixed(2)+"<br>"+"CLIENTE: "+$('#cliente :selected').text(),
     function(){
@@ -234,7 +234,7 @@ $('#procesarVenta').validate({
 
 $('#procesarVenta').on('keyup keypress', function(e) {
   var keyCode = e.keyCode || e.which;
-  if (keyCode === 13) { 
+  if (keyCode === 13) {
     e.preventDefault();
     return false;
   }
@@ -242,14 +242,14 @@ $('#procesarVenta').on('keyup keypress', function(e) {
 
 $('#cliente').on('select2:select', function (e) {
     var idCliente = e.params.data.id;
-    
+
     // para info de pagos $.get
 
       $.get( "{{route('obtenerPagos')}}", { id: idCliente} )
         .done(function( data ) {
 
           $("#mespago > option").each(function() {
-                
+
                 $('#mespago option[value="'+this.value+'"]').attr("disabled", false);
             });
 
@@ -270,7 +270,7 @@ $('#cliente').on('select2:select', function (e) {
 
 
       $('#selectMeses').show();
-      $(this).valid(); 
+      $(this).valid();
   });
 
 
@@ -282,7 +282,7 @@ function cargarProducto(argument) {
   cantidad=$('#txtcantidad'+id).val();
 
   if (cantidad>0 && cantidad<=cantidadSistema) {
-    
+
     if ($('#fila'+id).length) {
       alert('Ya existe');
     }else{
@@ -298,11 +298,11 @@ function cargarProducto(argument) {
         '<td><button class="btn btn-xs btn-danger" type="button" data-id="'+id+'" onclick="quitarProducto(this);">x</button></td>'+
       '</tr>';
 
-      $('#detalleFactura').append(fila);  
+      $('#detalleFactura').append(fila);
 
       crearContador();
     }
-    
+
 
   }else {
     alert('Cantidad a vender incorrecto');
@@ -310,7 +310,7 @@ function cargarProducto(argument) {
 }
 
 $('#mespago').on('change', function (e) {
-    
+
     mespago=$(this).val();
     valorPago=parseFloat($('#totalMes').val());
     descripcion=$('#mespago option:selected').html();
@@ -330,7 +330,7 @@ $('#mespago').on('change', function (e) {
           '<td><button class="btn btn-xs btn-danger" type="button" data-id="'+mespago+'" onclick="quitarProducto(this);">x</button></td>'+
         '</tr>';
 
-        $('#detalleFactura').append(fila);  
+        $('#detalleFactura').append(fila);
 
         crearContador();
       }
@@ -340,7 +340,7 @@ $('#mespago').on('change', function (e) {
       $('#mespago').val("");
     }
 
-  
+
 });
 
 
@@ -362,7 +362,7 @@ function crearContador(){
   }else{
     $('#acciones').hide();
   }
-  
+
 }
 
 function quitarProducto(argument){
